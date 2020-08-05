@@ -61,12 +61,7 @@ class IdeasController < ApplicationController
   end
 
   def authorized!
-    if can?(:crud, @idea)
-     @idea.destroy
-    else
-     flash[:notice] = "Not Authorized"
-     redirect_to ideas_path
-    end
+     redirect_to ideas_path,  alert:"Not Authorized" unless can?(:crud, @idea)
   end
 
 end

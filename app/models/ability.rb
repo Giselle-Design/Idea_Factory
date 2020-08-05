@@ -35,12 +35,6 @@ class Ability
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
     alias_action :create, :read, :update, :destroy, to: :crud
 
-    can(:crud, Idea) do |idea|
-      idea.user == user
-    end
-    can(:crud, Review) do |review|
-      review.user == user
-
     can(:like, Idea) do |idea|
       user.persisted? && idea.user != user
     end
@@ -48,6 +42,14 @@ class Ability
     can(:destroy, Like) do |like|
       like.user == user
     end
+
+    can(:crud, Idea) do |idea|
+      idea.user == user
+    end
+    can(:crud, Review) do |review|
+      review.user == user
+
+
 
     end
   end
