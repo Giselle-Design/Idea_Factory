@@ -1,0 +1,18 @@
+<h1 class = "topic">All Ideas</h1>
+
+<% flash.each do |type, message| %>
+  <div class = "container_fifth"<%= type %> >
+    <%= message %>
+  </div>
+<% end %>
+
+<% @ideas.each do |idea| %>
+<div class="container column">
+  <h2><%= link_to idea.title.truncate(50), idea_path(idea) %></h2>
+  <h4>By <strong><%= idea.user.full_name %></strong></h4>
+  <strong><small class="likes">Likes : <%= idea.likes.count %></small></strong>
+  <% if idea.members %>
+    <strong><small class="members">Members: <%= idea.members %></small></strong>
+  <% end %>
+</div>
+<% end %>

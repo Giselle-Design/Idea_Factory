@@ -1,0 +1,79 @@
+<% flash.each do |type, message| %>
+  <div class = "container_six"<%= type %> >
+    <%= message %>
+  </div>
+<% end %>
+
+
+
+
+<div class="container">
+  <h2 class = "topic_one"><%= @idea.title %></h2>
+  <p><%= @idea.body%></p>
+  <p>By <strong><%= @idea.user.full_name %></strong></p>
+    <% if can? :crud, @idea %>
+         <button class="edit"><%= link_to "Edit", edit_idea_path(@idea) %></button>
+         <button class="delete"><%= link_to "Delete", idea_path(@idea),
+           method: :delete, data: {confirm: "Are You sure?"} %></button>
+    <% end %>
+
+    <% if @like.present? %>
+          <button class="like"><%= link_to 'Liked', like_path(@like), method: :delete %></button>
+    <% else %>
+          <button class="like"><%= link_to 'Like', idea_likes_path(@idea), method: :post %></button>
+    <% end %>
+</div>
+
+<hr>
+
+
+<div class="container">
+  <%= form_with(model: [@idea, @review], local: true) do |f| %>
+
+  <% if @review.errors.any? %>
+
+  <ul>
+    <% @review.errors.full_messages.each do |msg| %>
+    <li class="color_text"><%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+     <div>
+
+       <%= f.text_area(
+       :body,
+       cols: 50,
+       rows: 5,
+       placeholder: "what are your idea?"
+       ) %>
+
+     </div>
+
+     <div><%= f.submit "Review" %></div>
+
+  <% end %>
+</div>
+
+<% @reviews.each do |review| %>
+ <div class = "container">
+    <ul>
+      <li>
+         <p>
+            <%= review.body%>
+         </p>
+         <p>
+          <small>
+              <%if can? :crud, review %>
+              <button class="delete_one"><%= link_to "Delete", idea_review_path(@idea, review),
+                  method: :delete, data: {confirm: "Are You sure?"} %></button>
+               <% end %>
+          </small>
+          <small>
+               By <strong><%= review.user.full_name %></strong>
+          </small>
+        </p>
+      </li>
+    </ul>
+ </div>
+<% end %>

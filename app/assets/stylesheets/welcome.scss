@@ -1,0 +1,328 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #a6a6a6; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 7px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #1a75ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker blue color */
+input[type=submit]:hover {
+  background-color:  #1a75ff;
+}
+
+
+input[type=email]{
+  padding : 10px;
+  margin-top: 7px;
+  margin-bottom: 16px;
+  width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=password]{
+  padding : 10px;
+  margin-top: 7px;
+  margin-bottom: 16px;
+  width: 98%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* Add a background color and some padding around the form */
+.container {
+  font-family: Verdana, Arial, serif;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 50px 400px 50px 400px
+}
+
+.container:hover {
+  background: #ccccff;
+}
+
+.alarm {
+  color : #6B6A69;
+  font-family: Verdana, Arial, serif;
+  line-height: 150%
+
+}
+
+
+
+button:active{
+  background-color: pink;
+  font-size: 15px
+}
+
+.edit {
+  background-color: #1a75ff;
+  border-style: none;
+  border-radius: 0.5em;
+  width: 10%;
+  padding: 7px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.delete {
+  background-color: #db0726;
+  border-style: none;
+  border-radius: 0.5em;
+  width: 10%;
+  padding: 7px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.like {
+  background-color: #1a75ff;
+  border-style: none;
+  border-radius: 0.5em;
+  width: 10%;
+  padding: 7px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+
+
+h2 a {
+  color: #3973ac;
+  text-decoration: none;
+}
+
+.like a {
+  color:white;
+  text-decoration: none;
+}
+
+.delete a {
+  color:white;
+  text-decoration: none;
+}
+
+.delete_one a{
+  color:white;
+  text-decoration: none;
+}
+
+.edit a {
+  color:white;
+  text-decoration: none;
+}
+
+
+hr {
+  width: 50%
+}
+
+.delete_one{
+  background-color: #db0726;
+  border-style: none;
+  border-radius: 0.5em;
+  width: 7%;
+  padding: 7px;
+  font-size: 0.8em;
+}
+
+small {
+  margin-right: 10px;
+}
+
+.navbar {
+  font-family: Georgia, "Lato black", serif;
+  list-style-type: none;
+  margin: 0 20px 0 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #666699;
+  height: 50px;
+}
+
+.active {
+   float: left;
+}
+
+.active_one {
+  float: right;
+}
+
+.active_one a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 14px 14px;
+  text-decoration: none;
+}
+
+.active_one a:hover {
+  background-color: #47476b;
+}
+
+.color_one a{
+  color: black
+}
+
+.active a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 14px 14px;
+  text-decoration: none;
+}
+
+.active a:hover {
+  background-color: #47476b;
+}
+
+
+body, html {
+  height: 100%
+}
+
+body {
+  background-color: #b3b3cb;
+}
+
+
+.bgimg {
+  position: relative;
+  margin: 20px;
+  height: 100%;
+  border-style: solid;
+  background-image : url("https://images.unsplash.com/photo-1516414447565-b14be0adf13e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.bgimg_one {
+  position: relative;
+  margin: 20px;
+  height: 100%;
+  border-style: solid;
+  background-image : url("https://images.unsplash.com/photo-1585547769764-bbd08e8b9b35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1443&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+}
+
+.middle_one {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+.middle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.topic {
+  font-family: Georgia, "Lato black", serif;
+  color : white;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px
+}
+
+.topic_one {
+   color: #3973ac;
+}
+
+.topic_one a {
+  color: #3973ac;
+}
+
+@media screen and (max-width: 667px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.topic_two {
+  color : white;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-family: Georgia, "Lato black", serif;
+}
+
+.container_four {
+    color: #3973ac;
+    font-family:  Georgia, "Lato black", serif;
+    padding: 20px;
+    margin: 50px 400px 50px 400px;
+    text-align: center;
+    line-height: 150%
+}
+
+.container_fifth {
+  font-family:  Georgia, "Lato black", serif;
+  padding: 20px;
+  color: white;
+  background-color: red;
+  margin: 50px 400px 50px 400px;
+  text-align: center;
+  line-height: 150%;
+  word-spacing: 0.2em;
+  border-radius: 5px
+}
+
+.container_six {
+  font-family:  Georgia, "Lato black", serif;
+  padding: 20px;
+  color: white;
+  background-color: #009933;
+  margin: 50px 400px 50px 400px;
+  text-align: center;
+  line-height: 150%;
+  word-spacing: 0.2em;
+  border-radius: 5px
+}
+
+.likes {
+  float: right;
+}
+
+.members {
+  float: right;
+}
