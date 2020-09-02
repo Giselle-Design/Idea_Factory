@@ -42,9 +42,9 @@ class IdeasController < ApplicationController
   end
 
   def destroy
-    flash[:notice] = "Idea Was Deleted!"
     @idea.destroy
     redirect_to ideas_path
+    flash[:notice] = "Idea Was Deleted!"
   end
 
 
